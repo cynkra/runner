@@ -8,7 +8,7 @@ ARG RUNNER_CONTAINER_HOOKS_VERSION=0.5.0
 
 RUN adduser runner
 
-RUN apt update && apt-get install -y --no-install-recommends curl git unzip sudo jq openssl ca-certificates
+RUN apt update && apt-get install -y --no-install-recommends curl git unzip sudo jq openssl ca-certificates make gcc g++ libc-dev
 
 WORKDIR /actions-runner
 RUN export RUNNER_ARCH=${TARGETARCH} \
