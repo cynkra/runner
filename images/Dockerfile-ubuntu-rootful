@@ -26,5 +26,8 @@ RUN curl -f -L -o runner-container-hooks.zip https://github.com/actions/runner-c
 ENV RUNNER_MANUALLY_TRAP_SIG=1
 ENV ACTIONS_RUNNER_PRINT_LOG_TO_STDOUT=1
 
+# configure directory permissions; ref https://github.com/actions/runner-images/blob/main/images/ubuntu/scripts/build/configure-system.sh
+RUN chmod -R 777 /opt /usr/share
+
 WORKDIR /home/runner
 USER runner
