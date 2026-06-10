@@ -1,5 +1,5 @@
 # actions/runner: https://github.com/actions/runner/releases/
-FROM alpine:3.18
+FROM alpine:3.24
 
 ARG TARGETOS
 ARG TARGETARCH
