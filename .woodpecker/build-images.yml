@@ -14,7 +14,7 @@ matrix:
 
 steps:
   "Build and publish image":
-    image: woodpeckerci/plugin-docker-buildx:2.2.1
+    image: woodpeckerci/plugin-docker-buildx:6.1.1
     secrets: [dockerhub_token_cynkragmbh]
     # environment:
     #   - RUNNER_VERSION=2.311.0
